@@ -1,5 +1,5 @@
 function noteService($http, $interpolate) {
-    var note = $interpolate('/api/note/{{id}}');
+    var note = $interpolate('/api/registry/{{id}}');
 
     return {
         list: list,
