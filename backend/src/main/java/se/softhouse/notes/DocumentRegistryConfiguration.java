@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 /**
  * @todo: this class should be renamed to 'MyProjectConfiguration' for your projects
  */
-class NotesConfiguration extends Configuration implements AssetsBundleConfiguration {
+class DocumentRegistryConfiguration extends Configuration implements AssetsBundleConfiguration {
     @Valid
     @NotNull
     @JsonProperty("database")

@@ -1,10 +1,17 @@
 package se.softhouse.notes.db.entity;
 
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class DocumentRegistry {
     private int id;
 
+    @NotEmpty
+    @Length(min = 2, max = 12, message = "must be between 2 and 12 characters")
     private String title;
 
+    @NotEmpty
+    @Length(min = 8, max = 255, message = "must be between 8 and 255 characters")
     private String text;
 
     public DocumentRegistry(){}
