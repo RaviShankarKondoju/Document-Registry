@@ -1,0 +1,18 @@
+body{
+    background-color: #f1f1f1;
+}
+
+.title{
+    font-family: 'Varela Round', sans-serif;
+}
+.header{
+    font-family: 'Spectral SC', serif;
+}
+.form_style{
+    font-family: 'Varela Round', sans-serif;
+}
+.pa-header{
+    padding-bottom:9px;
+    margin:40px 0 20px;
+    border-bottom:1px solid;
+}

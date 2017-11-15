@@ -13,5 +13,5 @@
         <button class="btn" data-clipboard-action="copy" data-clipboard-target="#header_name">Copy</button>
     </div>
 
-    <note-form  ng-switch-when="true" data="vm.data" on-submit="vm.submitEditedNote" on-reset="vm.resetEditedNote"></note-form>
+    <note-form ng-switch-when="true" data="vm.data" on-submit="vm.submitEditedNote" on-reset="vm.resetEditedNote"></note-form>
 </div>

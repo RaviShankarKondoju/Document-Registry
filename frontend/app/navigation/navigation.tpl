@@ -1,4 +1,4 @@
-<div class="page-header">
+<div class="pa-header">
     <h2 class="pull-left title">Document Registry</h2>
 
     <div class="btn-group pull-right header">

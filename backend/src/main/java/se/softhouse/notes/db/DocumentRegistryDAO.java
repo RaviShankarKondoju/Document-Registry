@@ -25,11 +25,11 @@ public interface DocumentRegistryDAO {
 
     @SqlQuery("select * FROM `document_registry` WHERE id = :id")
     Optional<DocumentRegistry> get( @Bind("id") int id);
-
-    @SqlUpdate("INSERT INTO `document_registry` (title, text, header_name) VALUES(:title, :text, :text || ' ' ||  datetime('now', 'localtime') || ' ' || random() )")
+    
+    @SqlUpdate("INSERT INTO `document_registry` (title, text, header_name) VALUES(:title, :text, :title || ' ' ||  datetime('now', 'localtime') || ' ' || random() )")
     void insert(@BindBean DocumentRegistry documentRegistry);
 
-    @SqlUpdate("UPDATE `document_registry` set title = :title, text = :text, header_name = :text || ' ' || datetime('now', 'localtime') || ' ' || random() WHERE id = :id")
+    @SqlUpdate("UPDATE `document_registry` set title = :title, text = :text, header_name = :title || ' ' || datetime('now', 'localtime') || ' ' || random() WHERE id = :id")
     void update(@BindBean DocumentRegistry documentRegistry);
 
     @SqlUpdate("DELETE FROM `document_registry` WHERE id = :id")

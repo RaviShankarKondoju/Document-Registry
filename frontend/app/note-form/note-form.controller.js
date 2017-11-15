@@ -20,6 +20,7 @@ function NoteFormController(noteService) {
             .then(vm.notesController.refreshNotes)
             .then(onUserDidReset)
             .catch(vm.showError);
+
     }
 
     function onUserDidReset() {
@@ -27,6 +28,7 @@ function NoteFormController(noteService) {
         vm.text = '';
         vm.noteForm.$setPristine();
         vm.noteForm.$setUntouched();
+
     }
 
     function showError(response) {
