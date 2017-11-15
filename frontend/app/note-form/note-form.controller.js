@@ -12,6 +12,7 @@ function NoteFormController(noteService) {
         var parentControllerHasSetData = angular.isDefined(vm.data);
         vm.title = parentControllerHasSetData ? vm.data.title : '';
         vm.text  = parentControllerHasSetData ? vm.data.text  : '';
+        vm.header_name  = parentControllerHasSetData ? vm.data.header_name  : '';
     }
 
     function onUserDidSubmit(title, text) {
