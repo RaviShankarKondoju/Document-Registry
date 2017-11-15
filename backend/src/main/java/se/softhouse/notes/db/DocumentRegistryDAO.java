@@ -14,25 +14,26 @@ import java.util.Optional;
 @RegisterMapperFactory(BeanMapperFactory.class)
 public interface DocumentRegistryDAO {
 
-    @SqlUpdate("CREATE TABLE IF NOT EXISTS `registry` (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +  //
+    @SqlUpdate("CREATE TABLE IF NOT EXISTS `document_registry` (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +  //
             "title VARCHAR(12) NOT NULL, " + //
-            "text VARCHAR(255) NOT NULL)")
+            "text VARCHAR(255) NOT NULL, " + //
+            "header_name VARCHAR(255) NOT NULL)")
     void createTable();
 
-    @SqlQuery("select * FROM `registry`")
+    @SqlQuery("select * FROM `document_registry`")
     List<DocumentRegistry> selectAll();
 
-    @SqlQuery("select * FROM `registry` WHERE id = :id")
+    @SqlQuery("select * FROM `document_registry` WHERE id = :id")
     Optional<DocumentRegistry> get( @Bind("id") int id);
 
-    @SqlUpdate("INSERT INTO `registry` (title, text) VALUES(:title, :text)")
+    @SqlUpdate("INSERT INTO `document_registry` (title, text, header_name) VALUES(:title, :text, :text || ' ' || CURRENT_TIMESTAMP || ' ' || random() )")
     void insert(@BindBean DocumentRegistry documentRegistry);
 
-    @SqlUpdate("UPDATE `registry` set title = :title, text = :text WHERE id = :id")
+    @SqlUpdate("UPDATE `document_registry` set title = :title, text = :text, header_name = :text || ' ' || CURRENT_TIMESTAMP || ' ' || random() WHERE id = :id")
     void update(@BindBean DocumentRegistry documentRegistry);
 
-    @SqlUpdate("DELETE FROM `registry` WHERE id = :id")
-    void delete(@BindBean("id") int id);
+    @SqlUpdate("DELETE FROM `document_registry` WHERE id = :id")
+    void delete(@Bind("id") int id);
 
 
 }
