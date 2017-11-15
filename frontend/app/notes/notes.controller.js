@@ -1,9 +1,9 @@
-function NotesController(noteService) {
+function NotesController($scope, $location, noteService) {
     var vm = this;
-
     vm.$onInit = $onInit;
     vm.refreshNotes = refreshNotes;
     vm.hasNotes = hasNotes;
+    $scope.location = $location;
 
     function $onInit() {
         vm.notes = [];

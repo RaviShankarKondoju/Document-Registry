@@ -1,9 +1,9 @@
 <div class="page-header">
-    <h4 class="pull-left">NotesApp</h4>
+    <h2 class="pull-left title">Document Registry</h2>
 
-    <div class="btn-group pull-right">
-        <a ng-href="#/" class="btn btn-default">Notes Page</a>
-        <a ng-href="#/info" class="btn btn-default">Info Page</a>
+    <div class="btn-group pull-right header">
+        <a ng-href="#/" class="btn btn-default">Home Page</a>
+        <a ng-href="#/info" class="btn btn-default">Header List</a>
     </div>
 
     <div class="clearfix"></div>
