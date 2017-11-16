@@ -1,9 +1,5 @@
-var clipboard = new Clipboard('.btn');
-
-clipboard.on('success', function(e) {
-    console.log(e);
-});
-
-clipboard.on('error', function(e) {
-    console.log(e);
+new Clipboard(".fw-code-copy-button", {
+    text: function(trigger) {
+        return $(trigger).parent().find('div').first().text();
+    }
 });

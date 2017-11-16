@@ -10,10 +10,17 @@
             <div class="clearfix"></div>
         </div>
         <div>
-        <div class="panel-body header_name">{{vm.data.header_name}}</div>
-        <button class="btn" data-clipboard-action="copy" data-clipboard-target='.header_name'>Copy</button>
+            <!--<span class="fw-code-copy">-->
+            <!--<span class="fw-code-copy-button">Copy</span>-->
+            <!--<div id="modal" class="panel-body header_name"> <code>{{vm.data.header_name}}</code></div>-->
+                <!--</span>-->
+            <!--</span>-->
+            <!--<button class="btn" data-clipboard-action="copy">Copy</button>-->
+
+            <div id="modal" class="panel-body fw-code-copy">{{vm.data.header_name}}</div>
+            <button class="btn fw-code-copy-button">Copy</button>
+
         </div>
     </div>
-
     <note-form ng-switch-when="true" data="vm.data" on-submit="vm.submitEditedNote" on-reset="vm.resetEditedNote"></note-form>
 </div>
