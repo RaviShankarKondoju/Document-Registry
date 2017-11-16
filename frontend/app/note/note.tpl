@@ -9,8 +9,10 @@
 
             <div class="clearfix"></div>
         </div>
-        <div id="header_name" class="panel-body">{{vm.data.header_name}}</div>
-        <button class="btn" data-clipboard-action="copy" data-clipboard-target="#header_name">Copy</button>
+        <div>
+        <div class="panel-body header_name">{{vm.data.header_name}}</div>
+        <button class="btn" data-clipboard-action="copy" data-clipboard-target='.header_name'>Copy</button>
+        </div>
     </div>
 
     <note-form ng-switch-when="true" data="vm.data" on-submit="vm.submitEditedNote" on-reset="vm.resetEditedNote"></note-form>
