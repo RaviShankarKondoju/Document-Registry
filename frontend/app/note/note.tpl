@@ -17,7 +17,7 @@
             <!--</span>-->
             <!--<button class="btn" data-clipboard-action="copy">Copy</button>-->
 
-            <div id="modal" class="panel-body fw-code-copy">{{vm.data.header_name}}</div>
+            <div class="panel-body fw-code-copy">{{vm.data.header_name}}</div>
             <button class="btn fw-code-copy-button">Copy</button>
 
         </div>
