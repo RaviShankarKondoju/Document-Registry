@@ -3,7 +3,7 @@
 
     <div class="btn-group pull-right header">
         <a ng-href="#/" class="btn btn-default">Home Page</a>
-        <a ng-href="#/info" class="btn btn-default">Header List</a>
+        <a ng-href="#/headerlist" class="btn btn-default">Header List</a>
     </div>
 
     <div class="clearfix"></div>
