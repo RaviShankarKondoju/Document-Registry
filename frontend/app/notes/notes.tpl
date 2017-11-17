@@ -2,7 +2,7 @@
     <navigation class="row"></navigation>
 
     <div class="row">
-        <note-form class="col-xs-12" ng-if="location.path() != '/info'" ></note-form>
+        <note-form class="col-xs-12" ng-if="location.path() != '/headerlist'" ></note-form>
 
         <!--<div class="col-xs-12 text-center" ng-if="!vm.hasNotes()">-->
             <!--<div class="alert alert-info" role="alert">-->
