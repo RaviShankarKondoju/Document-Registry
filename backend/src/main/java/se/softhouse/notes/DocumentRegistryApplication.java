@@ -15,9 +15,7 @@ import se.softhouse.notes.services.NoteService;
 import se.softhouse.notes.services.impl.DocumentRegistryServiceDbImpl;
 import se.softhouse.notes.services.impl.NoteServiceDbImpl;
 
-/**
- * @todo: this class should be renamed to 'MyProjectConfiguration' for your projects
- */
+
 public class DocumentRegistryApplication extends Application<DocumentRegistryConfiguration> {
     @Override
     public void run(DocumentRegistryConfiguration configuration, Environment environment) throws Exception {
