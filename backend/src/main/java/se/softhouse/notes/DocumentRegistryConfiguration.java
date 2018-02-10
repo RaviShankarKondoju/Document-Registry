@@ -9,9 +9,7 @@ import io.dropwizard.db.DataSourceFactory;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-/**
- * @todo: this class should be renamed to 'MyProjectConfiguration' for your projects
- */
+
 class DocumentRegistryConfiguration extends Configuration implements AssetsBundleConfiguration {
     @Valid
     @NotNull
