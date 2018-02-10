@@ -2,9 +2,6 @@ package se.softhouse.notes.exceptions;
 
 import java.util.function.Supplier;
 
-/**
- * @todo: this class should be renamed to 'MyProjectExceptions' for your projects
- */
 public enum NoteExceptions implements Supplier<RuntimeException> {
     BAD_REQUEST(with(400, "Bad request to resource")), //
     NOT_AUTHORIZED(with(401, "Unauthorized")), //
